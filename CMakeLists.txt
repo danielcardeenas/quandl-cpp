@@ -9,12 +9,12 @@ include_directories(${PROJECT_SOURCE_DIR}/quandlcpp/include/)
 include_directories(${CPR_INCLUDE_DIRS})
 include_directories(${JSON_INCLUDE_DIRS})
 
-set(LIB_FILES
+set(QUANDLCPP_FILES
         quandlcpp/src/stock.cpp 
         quandlcpp/src/quandl/quandl.cpp
         quandlcpp/src/quandl/databases/database.cpp 
         quandlcpp/src/quandl/response.cpp
         )
         
-add_library(quandlcpp ${LIB_FILES})
+add_library(quandlcpp ${QUANDLCPP_FILES})
 target_link_libraries(quandlcpp ${CPR_LIBRARIES})
