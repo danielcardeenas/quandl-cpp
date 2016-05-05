@@ -17,18 +17,18 @@ Quick example:
 ### Usage
 Inside your project clone the repo this way.
 
-Normal clone
+##### 1. Normal clone
 ```shell
 git clone --recursive git@github.com:danielcardeenas/quandl-cpp.git
 ```
 
-(Optional) If you project is under git, __instead of cloning__ I recommend submoduling instead to keep up with newer versions
+###### 1.1 (Optional) If you project is under git, __instead of cloning__ I recommend submoduling instead to keep up with newer versions
 ```shell
 git submodule add git@github.com:danielcardeenas/quandl-cpp.git
 git submodule update --init --recursive
 ```
 
-Next, add this subdirectory to your CMakeLists.txt before declaring any targets that might use it:
+##### 2. Next, add this subdirectory to your CMakeLists.txt before declaring any targets that might use it:
 
 ```cmake
 # Compile library 
@@ -42,11 +42,12 @@ This will create the following CMake variables which you can use in any part of 
 + `CPR_LIBRARIES` <sub>(cpr library)</sub>
 + `QUANDLCPP_LIB` <sub>(quandlcpp library)</sub>
 
+##### 3. Add them to your project like you normally do:
 ```cmake
 # Include directories
 include_directories(${QUANDLCPP_INCLUDE_DIR} ${CPR_INCLUDE_DIRS} ${JSON_INCLUDE_DIRS})
 
-add_executable(..)
+add_executable(...)
 
 target_link_libraries(example quandlcpp ${QUANDLCPP_LIB} ${CPR_LIBRARIES})
 ```
