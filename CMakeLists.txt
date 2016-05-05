@@ -6,6 +6,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 add_subdirectory(modules)
 
 set(QUANDLCPP_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/quandlcpp/include/ CACHE INTERNAL "")
+set(QUANDLCPP_LIB quandlcpp CACHE INTERNAL "")
 
 #include_directories(${PROJECT_SOURCE_DIR}/quandlcpp/include/)
 include_directories(${QUANDLCPP_INCLUDE_DIR})
