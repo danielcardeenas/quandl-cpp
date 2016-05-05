@@ -1,6 +1,6 @@
-[submodule "modules/cpr"]
+[submodule "cpr"]
 	path = cpr
 	url = git@github.com:whoshuu/cpr.git
-[submodule "modules/json"]
+[submodule "json"]
 	path = json
 	url = git://github.com/nlohmann/json.git
