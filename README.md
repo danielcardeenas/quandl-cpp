@@ -1,4 +1,6 @@
-# Quandl-cpp
+# Comeback in one week when this lib is ready
+
+## Quandl-cpp
 C++ API for Quandl
 
 Usage:
