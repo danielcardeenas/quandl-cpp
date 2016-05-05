@@ -8,7 +8,7 @@ add_subdirectory(modules)
 set(QUANDLCPP_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/quandlcpp/include/ CACHE INTERNAL "")
 
 #include_directories(${PROJECT_SOURCE_DIR}/quandlcpp/include/)
-include_directories(${QUANDLCPP_INCLUDE})
+include_directories(${QUANDLCPP_INCLUDE_DIR})
 include_directories(${CPR_INCLUDE_DIRS})
 include_directories(${JSON_INCLUDE_DIRS})
 
