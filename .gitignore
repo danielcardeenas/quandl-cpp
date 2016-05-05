@@ -4,4 +4,3 @@ build/
 tags
 .vscode/
 build.sh
-.gitignore
