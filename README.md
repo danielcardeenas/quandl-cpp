@@ -31,7 +31,7 @@ git submodule update --init --recursive
 ##### 2. Next, add this subdirectory to your CMakeLists.txt before declaring any targets that might use it:
 
 ```cmake
-# Compile library 
+# Compiles library 
 add_subdirectory(quandl-cpp)
 ```
 
