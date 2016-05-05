@@ -1,17 +1,20 @@
 cmake_minimum_required(VERSION 2.8.7)
 
-set(JSON_INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/json/src PARENT_SCOPE)
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 
-if(WIN32)
-    option(CMAKE_USE_OPENSSL "Use OpenSSL code. Experimental" OFF)
-endif()
+add_subdirectory(modules)
 
-set(BUILD_CPR_TESTS OFF CACHE BOOL "Don't build cpr tests")
-find_package(CURL)
-if(CURL_FOUND)
-    set(USE_SYSTEM_CURL ON CACHE BOOL "Use the system curl for faster builds")
-endif()
+include_directories(${PROJECT_SOURCE_DIR}/quandlcpp/include/)
+include_directories(${CPR_INCLUDE_DIRS})
+include_directories(${JSON_INCLUDE_DIRS})
 
-add_subdirectory(cpr)
-add_subdirectory(json)
-add_subdirectory(quandlcpp)
+set(LIB_FILES
+        quandlcpp/src/stock.cpp 
+        quandlcpp/src/quandl/quandl.cpp
+        quandlcpp/src/quandl/databases/database.cpp 
+        quandlcpp/src/quandl/response.cpp
+        )
+        
+add_library(quandlcpp ${LIB_FILES})
+target_link_libraries(quandlcpp ${CPR_LIBRARIES})
