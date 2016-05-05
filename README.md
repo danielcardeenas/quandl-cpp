@@ -17,8 +17,15 @@ Quick example:
 ### Usage
 Inside your project clone the repo this way.
 
+Normal clone
 ```shell
 git clone --recursive git@github.com:danielcardeenas/quandl-cpp.git
+```
+
+(Optional) If you project is under git, __instead of cloning__ I recommend submoduling instead to keep up with newer versions
+```shell
+git submodule add git@github.com:danielcardeenas/quandl-cpp.git
+git submodule update --init --recursive
 ```
 
 Next, add this subdirectory to your CMakeLists.txt before declaring any targets that might use it:
@@ -29,11 +36,11 @@ add_subdirectory(quandl-cpp)
 ```
 
 This will create the following CMake variables which you can use in any part of your project
-+ `QUANDLCPP_INCLUDE_DIR` (quandlcpp .h files)
-+ `JSON_INCLUDE_DIRS` (json .h files)
-+ `CPR_INCLUDE_DIRS` (cpr .h files)
-+ `CPR_LIBRARIES` (cpr library)
-+ `QUANDLCPP_LIB` (quandlcpp library)
++ `QUANDLCPP_INCLUDE_DIR` <sub>(quandlcpp .h files)</sub>
++ `JSON_INCLUDE_DIRS` <sub>(json .h files)</sub>
++ `CPR_INCLUDE_DIRS` <sub>(cpr .h files)</sub>
++ `CPR_LIBRARIES` <sub>(cpr library)</sub>
++ `QUANDLCPP_LIB` <sub>(quandlcpp library)</sub>
 
 ```cmake
 # Include directories
