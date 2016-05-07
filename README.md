@@ -22,7 +22,7 @@ Inside your project clone the repo this way.
 git clone --recursive git@github.com:danielcardeenas/quandl-cpp.git
 ```
 
-###### 1.1 (Optional) If you project is under git, __instead of cloning__ I recommend submoduling instead to keep up with newer versions
+###### 1.1 (Optional) If you project is under git, __instead of cloning__ I recommend submoduling to keep up with newer versions
 ```shell
 git submodule add git@github.com:danielcardeenas/quandl-cpp.git
 git submodule update --init --recursive
