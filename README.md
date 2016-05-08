@@ -49,5 +49,5 @@ include_directories(${QUANDLCPP_INCLUDE_DIR} ${CPR_INCLUDE_DIRS} ${JSON_INCLUDE_
 
 add_executable(...)
 
-target_link_libraries(example quandlcpp ${QUANDLCPP_LIB} ${CPR_LIBRARIES})
+target_link_libraries(example ${QUANDLCPP_LIB} ${CPR_LIBRARIES})
 ```
