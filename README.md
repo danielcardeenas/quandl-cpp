@@ -47,7 +47,7 @@ This will create the following CMake variables which you can use in any part of 
 # Include directories
 include_directories(${QUANDLCPP_INCLUDE_DIR} ${CPR_INCLUDE_DIRS} ${JSON_INCLUDE_DIRS})
 
-add_executable(...)
+add_executable(your_project ${YOUR_SOURCE_FILES})
 
-target_link_libraries(example ${QUANDLCPP_LIB} ${CPR_LIBRARIES})
+target_link_libraries(your_project ${QUANDLCPP_LIB} ${CPR_LIBRARIES})
 ```
